@@ -4,9 +4,19 @@
 // that manipulates variables defined in the outer scope.
 // The outer scope can be a parent function, or the top level of the script.
 
+const parent = function() {
+  let sum = 0;
+  const parentVariable = 4;
+  const child = function() {
+    sum = 2 + parentVariable;
+  };
+  child();
+  return sum;
+};
+
+console.log(parent());
 
 /* STRETCH PROBLEMS, Do not attempt until you have completed all previous tasks for today's project files */
-
 
 // ==== Challenge 2: Implement a "counter maker" function ====
 const counterMaker = () => {
