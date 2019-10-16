@@ -32,7 +32,11 @@ const counterMaker = () => {
   };
 };
 
-console.log(counterMaker());
+const numberCount = counterMaker();
+
+console.log(numberCount());
+console.log(numberCount());
+console.log(numberCount());
 
 // Example usage: const myCounter = counterMaker();
 // myCounter(); // 1
